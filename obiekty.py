@@ -5,6 +5,7 @@ class BankAccount:
         self.last_name = nazwisko
         self.number = nr_konta
         self.cash = stan
+        isinstance()
 
     def wypisz(self):
         s = f"""
