@@ -5,6 +5,7 @@ class Employee:
         self.first_name =first_name
         self.last_name = last_name
         self._salary = None
+        self.__prawdziwe_imie = 'czesław'
 
     def set_salary(self, amount):
         if not (isinstance(amount, (int, float)) and amount > 0):
@@ -12,6 +13,3 @@ class Employee:
         self._salary = amount
 
 
-
-e = Employee(1,1,1)
-print(isinstance(e, Employee))
