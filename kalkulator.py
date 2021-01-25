@@ -24,6 +24,10 @@ class Calculator:
         return wynik
 
 
+    def print_operations(self):
+        for item in self.history:
+            print(item)
+
 c = Calculator()
 print(c.add(1, 2))
 print(c.multiplay(1, 2))
@@ -32,6 +36,5 @@ print(c.add(1, 3))
 print(c.add(1, 4))
 print(c.add(1, 5))
 
-for item in c.history:
-    print(item)
+
 
