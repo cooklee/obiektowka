@@ -6,32 +6,28 @@ class BankAccount:
         self.number = nr_konta
         self.cash = stan
 
-class Skowronek:
+    def wypisz(self):
+        s = f"""
+        imie:{self.first_name}
+        nazwisko:{self.last_name}
+        nr:{self.number}
+        stan:{self.cash}
+            """
+        print(s)
 
-    def __init__(self, imie, nazwisko, nr_konta, stan):
-        self.first_name = imie
-        self.last_name = nazwisko
-        self.number = nr_konta
-        self.cash = stan
-
+def wypisz(account):
+    s = f"""
+            imie:{account.first_name}
+            nazwisko:{account.last_name}
+            nr:{account.number}
+            stan:{account.cash}
+                """
+    print(s)
 
 b = BankAccount(nazwisko="Bogusławski", nr_konta=123, stan=0, imie="Sławek")
 b1 = BankAccount('Gosia', 'Samosia', 1, 1000)
+b.wypisz() # wypisz(b)
+b1.wypisz() # wypisz(b1)
+
 c = BankAccount('Celina', 'Henka', 2, -500)
 c1 = BankAccount("Agnieszka", 'Gamon', 3, 2000)
-s = Skowronek("Skowronek", 'Malutki', 4, 100)
-lst = [b, b1, c, c1, s]
-
-
-def wypisz(dupa):
-    s = f"""
-imie:{dupa.first_name}
-nazwisko:{dupa.last_name}
-nr:{dupa.number}
-stan:{dupa.cash}
-    """
-    print(s)
-
-for item in lst:
-    wypisz(item)
-    print("_____________________________")
