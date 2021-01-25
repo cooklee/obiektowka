@@ -37,14 +37,14 @@ class Sonda:
 class Sonda2:
 
     def __init__(self, distance):
-        self.distance = distance
+        self.hh = distance
 
     @property
-    def distance(self):
+    def hh(self):
         return self._distance * 4
 
-    @distance.setter
-    def distance(self, distance):
+    @hh.setter
+    def hh(self, distance):
         self._distance = distance / 4
 
 
