@@ -10,6 +10,12 @@ class Car:
 
 
 class Truck(Car):
+    def __init__(self, marka, model, silnik, ladownosc):
+        super().__init__(marka, model,silnik)
+        self.capacity = ladownosc
+
+
+
     def __str__(self):
         s = super().__str__()
         return  s + " To jest super ciężarówka"
@@ -19,14 +25,14 @@ class SuperTruck(Truck):
         s = super(Car, self).__str__()
         return s + " To jest super Super Cieżarówka"
 
-t= Truck("Star", 'V11', 'Disel')
-t1= Truck("Star", 'V12', 'Disel')
-t2= Truck("Star", 'V13', 'Disel')
-st3 = SuperTruck("Super Truck", 'V23', 'Electric')
+t= Truck("Star", 'V11', 'Disel', 1)
+t1= Truck("Star", 'V12', 'Disel', 2)
+t2= Truck("Star", 'V13', 'Disel', 3)
 
+print(t.__init__('a','b','d', 1))
 print(t)
 print(t1)
 print(t2)
-print(st3)
+
 
 
