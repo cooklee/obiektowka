@@ -1,3 +1,6 @@
+import random
+
+
 class Employee:
     next_id = 1
 
@@ -20,9 +23,6 @@ class Employee2:
 
     @classmethod
     def get_next_id(cls):
-        # print(cls.__name__,)
-        # print(f"cls==Employee2-> {cls == Employee2}")
-        # print(f"cls==SuperEmployee-> {cls == SuperEmployee}")
         id = cls.next_id
         cls.next_id += 1
         return id
@@ -39,14 +39,17 @@ class Employee2:
             raise ValueError("nie Poprawna wartość pensji")
         self._salary = amount
 
-class SuperEmployee(Employee2):
-    pass
 
-import random
+class SuperEmployee(Employee2):
+    next_id = 1
+
+
 for x in range(20):
-    if random.randint(0,1):
-        a = Employee2(1,1)
+    if random.randint(0, 1):
+        a = Employee2(1, 1)
+        a.get_next_id()
         print(a.id, 'Employee')
     else:
-        a = SuperEmployee(1,1)
-        print(a.id, 'SuperEmployee')
+        b = SuperEmployee(1, 1)
+        b.get_next_id()
+        print(b.id, 'SuperEmployee')
